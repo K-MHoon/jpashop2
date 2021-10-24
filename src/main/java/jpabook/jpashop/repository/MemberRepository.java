@@ -1,21 +1,19 @@
 package jpabook.jpashop.repository;
 
 import jpabook.jpashop.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceUnit;
+
 import java.util.List;
 
 // 컴포넌트 스캔의 대상 Repository
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    // 스프링이 엔티티 매니저를 주입해줌.
-    @PersistenceContext
-    private EntityManager em;
+    private final EntityManager em;
 
     // 엔티티 매니저 팩토리를 주입받고 싶다면 주석 해제
 //    @PersistenceUnit
