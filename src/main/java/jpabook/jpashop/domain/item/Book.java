@@ -14,4 +14,15 @@ public class Book extends Item {
 
     private String author;
     private String isbn;
+
+    /**
+     * 변경 메서드
+     */
+    public void updateBook(String name, int price, int stockQuantity, String author, String isbn) {
+        setName(name);
+        setPrice(price);
+        setStockQuantity(stockQuantity);
+        setAuthor(author);
+        setIsbn(isbn);
+    }
 }
